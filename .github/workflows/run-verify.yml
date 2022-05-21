@@ -1,0 +1,33 @@
+name: 'Run Verify'
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+jobs:
+  run-verify:
+    name: 'Run Verify'
+    runs-on: macos-latest
+
+    strategy:
+      matrix:
+        node-version: [ 16.14.2 ]
+
+    steps:
+      - name: 'Check out Git repository'
+        uses: actions/checkout@v3
+
+      - name: 'Set up Node.js'
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: 'Install Node.js dependencies'
+        run: npm ci
+
+      - name: 'Run Verify'
+        run: npm run verify
