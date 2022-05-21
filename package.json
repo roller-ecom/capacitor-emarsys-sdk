@@ -33,10 +33,10 @@
   ],
   "scripts": {
     "check:updates": "npm-check --skip-unused -u -E",
-    "verify": "npm run verify:ios && npm run verify:android && npm run verify:web",
+    "verify": "npm run verify:ios && npm run verify:web",
     "verify:ios": "cd ios && pod install && xcodebuild -workspace Plugin.xcworkspace -scheme Plugin && cd ..",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
-    "verify:web": "npm run build",
+    "verify:web": "npm run build:without:docgen",
     "lint": "npm run eslint && npm run prettier -- --check && npm run swiftlint -- lint",
     "fmt": "npm run eslint -- --fix && npm run prettier -- --write && npm run swiftlint -- autocorrect --format",
     "eslint": "eslint . --ext ts",
@@ -44,6 +44,7 @@
     "swiftlint": "node-swiftlint",
     "docgen": "docgen --api EmarsysPlugin --output-readme README.md --output-json dist/docs.json && doctoc README.md --github --title '**Table of Content**' --maxlevel 3",
     "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js",
+    "build:without:docgen": "npm run clean && tsc && rollup -c rollup.config.js",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build"
