@@ -9,8 +9,10 @@ end
 
 target 'Plugin' do
   capacitor_pods
+  pod 'EmarsysSDK', '3.2.2'
 end
 
 target 'PluginTests' do
   capacitor_pods
+  pod 'EmarsysSDK', '3.2.2'
 end
