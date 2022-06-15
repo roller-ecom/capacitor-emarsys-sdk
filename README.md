@@ -5,14 +5,12 @@
 
 This Plugin is used as a wrapper for the [Emarsys SDK](https://help.emarsys.com/hc/en-us).
 
-It currently uses Version [`3.2.2`](https://github.com/emartech/ios-emarsys-sdk/releases/tag/3.2.2) of the SDK.
-
-👉🏼 **Note**: It only supports iOS at the moment
-
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Content**
 
+- [Helpful Links](#helpful-links)
+- [SDK Versions](#sdk-versions)
 - [Install](#install)
 - [Setup](#setup)
   - [Initialize SDK](#initialize-sdk)
@@ -62,6 +60,16 @@ It currently uses Version [`3.2.2`](https://github.com/emartech/ios-emarsys-sdk/
 - [Changelog](#changelog)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Helpful Links
+
+- [iOS Library](https://github.com/emartech/ios-emarsys-sdk/wiki)
+- [Emarsys Platform](https://suite56.emarsys.net/)
+
+## SDK Versions
+
+- iOS: [`3.2.2`](https://github.com/emartech/ios-emarsys-sdk/releases/tag/3.2.2)
+- Android: Not implemented
 
 ## Install
 
