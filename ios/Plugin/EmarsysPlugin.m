@@ -21,6 +21,7 @@ CAP_PLUGIN(EmarsysPlugin, "Emarsys",
            CAP_PLUGIN_METHOD(trackTag, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(trackCard, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(trackPurchase, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(trackCustomEvent, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(recommendProducts, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(trackRecommendationClick, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(fetchMessages, CAPPluginReturnPromise);
