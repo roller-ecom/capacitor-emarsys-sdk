@@ -12,6 +12,7 @@ import type { ApplicationCode, MerchantId } from './interfaces/config';
 import type { InboxTag } from './interfaces/inbox';
 import type {
   CardItems,
+  CustomEvent,
   Product,
   Purchase,
   RecommendedProductOptions,
@@ -187,6 +188,12 @@ export interface EmarsysPlugin {
    * @since 1.0.0
    */
   trackPurchase(options: Purchase): Promise<void>;
+
+  // Custom Events
+
+  trackCustomEvent(event: CustomEvent): Promise<void>;
+
+  // recommended Products
 
   /**
    * With the Emarsys SDK you can ask for product recommendations based on different recommendation logics.

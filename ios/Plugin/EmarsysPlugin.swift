@@ -243,6 +243,24 @@ public class EmarsysPlugin: CAPPlugin {
         predictHandler.trackPurchase(call);
     }
     
+    // Custom Events
+    
+    @objc func trackCustomEvent(_ call: CAPPluginCall) {
+        let eventAttributes = call.options["attributes"];
+        
+        Emarsys.trackCustomEvent(eventName: call.getString("name")!, eventAttributes: eventAttributes as? [String : String]) {
+            error in
+            guard error == nil else {
+                call.reject(error!.localizedDescription)
+                return
+            }
+            
+            call.resolve();
+        }
+    }
+    
+    // Recommended Products
+    
     @objc func recommendProducts(_ call: CAPPluginCall) {
         predictHandler.recommendProducts(call);
     }
