@@ -26,6 +26,22 @@ export interface Purchase extends CardItems {
   orderId: string;
 }
 
+export interface CustomEvent {
+  /**
+   * The eventName
+   *
+   * @since 1.0.0
+   */
+  name: string;
+
+  /**
+   * The event attributes
+   *
+   * @since 1.0.0
+   */
+  attributes?: {[key: string]: string};
+}
+
 /**
  * Based on `searchTerm`
  */
