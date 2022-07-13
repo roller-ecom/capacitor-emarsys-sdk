@@ -39,6 +39,7 @@ This Plugin is used as a wrapper for the [Emarsys SDK](https://help.emarsys.com/
   - [trackTag(...)](#tracktag)
   - [trackCard(...)](#trackcard)
   - [trackPurchase(...)](#trackpurchase)
+  - [trackCustomEvent(...)](#trackcustomevent)
   - [recommendProducts(...)](#recommendproducts)
   - [trackRecommendationClick(...)](#trackrecommendationclick)
   - [fetchMessages()](#fetchmessages)
@@ -235,6 +236,7 @@ In order to track email link clicks that open the application directly with the 
 * [`trackTag(...)`](#tracktag)
 * [`trackCard(...)`](#trackcard)
 * [`trackPurchase(...)`](#trackpurchase)
+* [`trackCustomEvent(...)`](#trackcustomevent)
 * [`recommendProducts(...)`](#recommendproducts)
 * [`trackRecommendationClick(...)`](#trackrecommendationclick)
 * [`fetchMessages()`](#fetchmessages)
@@ -526,6 +528,19 @@ To report a purchase event you should call this method with the items purchased 
 | **`options`** | <code><a href="#purchase">Purchase</a></code> |
 
 **Since:** 1.0.0
+
+--------------------
+
+
+### trackCustomEvent(...)
+
+```typescript
+trackCustomEvent(event: CustomEvent) => Promise<void>
+```
+
+| Param       | Type                                                |
+| ----------- | --------------------------------------------------- |
+| **`event`** | <code><a href="#customevent">CustomEvent</a></code> |
 
 --------------------
 
@@ -846,6 +861,14 @@ Remove all native listeners for this plugin.
 | Prop          | Type                | Since |
 | ------------- | ------------------- | ----- |
 | **`orderId`** | <code>string</code> | 1.0.0 |
+
+
+#### CustomEvent
+
+| Prop             | Type                                    | Description          | Since |
+| ---------------- | --------------------------------------- | -------------------- | ----- |
+| **`name`**       | <code>string</code>                     | The eventName        | 1.0.0 |
+| **`attributes`** | <code>{ [key: string]: string; }</code> | The event attributes | 1.0.0 |
 
 
 #### RecommendedProducts
