@@ -1,3 +1,15 @@
+## [1.1.0](https://github.com/EinfachHans/capacitor-emarsys-sdk/compare/V1.0.0...V1.1.0) (2022-07-19)
+
+
+### Features
+
+* `trackCustomEvent` added ([#5](https://github.com/EinfachHans/capacitor-emarsys-sdk/issues/5)) ([331a0cb](https://github.com/EinfachHans/capacitor-emarsys-sdk/commit/331a0cb3652df99c455151672eeebae69296354f))
+
+
+### Code Refactoring
+
+* update EmarsysSDK to `3.2.3` ([ee3bb1f](https://github.com/EinfachHans/capacitor-emarsys-sdk/commit/ee3bb1f3a6bd53c3e9be72642ee0062583b36677))
+
 ## 1.0.0 (2022-07-13)
 
 
