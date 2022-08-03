@@ -1,3 +1,10 @@
+## [1.2.0](https://github.com/EinfachHans/capacitor-emarsys-sdk/compare/V1.1.0...V1.2.0) (2022-08-03)
+
+
+### Features
+
+* Capacitor V4 Support ([712287a](https://github.com/EinfachHans/capacitor-emarsys-sdk/commit/712287a89bd565256ebdcee98ec6c7deef89719d))
+
 ## [1.1.0](https://github.com/EinfachHans/capacitor-emarsys-sdk/compare/V1.0.0...V1.1.0) (2022-07-19)
 
 

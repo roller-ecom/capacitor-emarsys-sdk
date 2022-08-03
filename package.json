@@ -1,6 +1,6 @@
 {
   "name": "@rollershop/capacitor-emarsys-sdk",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Capacitor Plugin that wraps the Emarsys SDK",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
