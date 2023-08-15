@@ -20,19 +20,26 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [ 16.14.2 ]
+        node-version: [ 18.16.0 ]
 
     steps:
       - name: 'Check out Git repository'
         uses: actions/checkout@v3
 
-      - name: 'Set up Node.js'
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: Set node
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+          cache: pnpm
 
-      - name: 'Install Node.js dependencies'
-        run: npm ci
+      - name: Setup ni
+        run: npm i -g @antfu/ni
+
+      - name: Install
+        run: nci
 
       - name: 'Starting semantic release'
-        run: npx semantic-release
+        run: nr semantic-release
