@@ -69,7 +69,7 @@ This Plugin is used as a wrapper for the [Emarsys SDK](https://help.emarsys.com/
 
 ## SDK Versions
 
-- iOS: [`3.2.3`](https://github.com/emartech/ios-emarsys-sdk/releases/tag/3.2.3)
+- iOS: [`3.4.0`](https://github.com/emartech/ios-emarsys-sdk/releases/tag/3.4.0)
 - Android: Not implemented
 
 ## Install
