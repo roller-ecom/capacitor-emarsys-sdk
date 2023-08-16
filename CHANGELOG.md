@@ -1,3 +1,10 @@
+## [1.2.1-beta.3](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.2.1-beta.2...V1.2.1-beta.3) (2023-08-16)
+
+
+### Code Refactoring
+
+* update EmarsysSDK to `3.4.0` ([7244494](https://github.com/roller-ecom/capacitor-emarsys-sdk/commit/724449403c1fb1d984e4d5ff3fc21fc3285124df))
+
 ## [1.2.1-beta.2](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.2.1-beta.1...V1.2.1-beta.2) (2023-08-16)
 
 
