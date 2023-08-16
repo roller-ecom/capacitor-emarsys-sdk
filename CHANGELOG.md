@@ -1,3 +1,10 @@
+## [1.2.1-beta.1](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.2.0...V1.2.1-beta.1) (2023-08-16)
+
+
+### Bug Fixes
+
+* test ci & new capacitor versoin ([1696f8f](https://github.com/roller-ecom/capacitor-emarsys-sdk/commit/1696f8f6a0305b01ff7418a556a376f5b33b71ea))
+
 ## [1.2.0](https://github.com/EinfachHans/capacitor-emarsys-sdk/compare/V1.1.0...V1.2.0) (2022-08-03)
 
 
