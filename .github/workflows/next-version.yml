@@ -31,6 +31,8 @@ jobs:
 
       - name: Set node
         uses: actions/setup-node@v3
+        # with:
+        #   node-version: ${{ matrix.node-version }}
         with:
           node-version: ${{ matrix.node-version }}
           cache: pnpm
@@ -38,8 +40,10 @@ jobs:
       - name: Setup ni
         run: npm i -g @antfu/ni
 
-      - name: Install
+      - name: 'Install Node.js dependencies'
+        # run: npm ci
         run: nci
 
       - name: 'Starting semantic release'
-        run: nr semantic-release
+        run: npx semantic-release
+        # run: nlx semantic-release
