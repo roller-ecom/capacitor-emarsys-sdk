@@ -6,20 +6,20 @@ settings:
 
 devDependencies:
   '@capacitor/android':
-    specifier: ^5.2.3
-    version: 5.2.3(@capacitor/core@5.2.3)
+    specifier: ^5.3.0
+    version: 5.3.0(@capacitor/core@5.3.0)
   '@capacitor/cli':
-    specifier: ^5.2.3
-    version: 5.2.3
+    specifier: ^5.3.0
+    version: 5.3.0
   '@capacitor/core':
-    specifier: ^5.2.3
-    version: 5.2.3
+    specifier: ^5.3.0
+    version: 5.3.0
   '@capacitor/docgen':
     specifier: 0.2.1
     version: 0.2.1
   '@capacitor/ios':
-    specifier: ^5.2.3
-    version: 5.2.3(@capacitor/core@5.2.3)
+    specifier: ^5.3.0
+    version: 5.3.0(@capacitor/core@5.3.0)
   '@commitlint/config-conventional':
     specifier: 17.7.0
     version: 17.7.0
@@ -207,16 +207,16 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@capacitor/android@5.2.3(@capacitor/core@5.2.3):
-    resolution: {integrity: sha512-TqXOq5RIniMACcAckn/X84XajPP2GU4VH7Er390Ja2Y2BWSeUKgk7T8aURcwLYu2hnv+Op9eTww5MTBb3zBtmg==}
+  /@capacitor/android@5.3.0(@capacitor/core@5.3.0):
+    resolution: {integrity: sha512-5rEwD8u0whGXP+dZ0qXRFP3DWHi4WhZdzcxxZ/D4mLh5eVaQCxPpoHBcrS4FpKtl7PAWNDD2n32D9YrEcfERMA==}
     peerDependencies:
-      '@capacitor/core': ^5.2.0
+      '@capacitor/core': ^5.3.0
     dependencies:
-      '@capacitor/core': 5.2.3
+      '@capacitor/core': 5.3.0
     dev: true
 
-  /@capacitor/cli@5.2.3:
-    resolution: {integrity: sha512-iqjOnA9fCxm+cFv5iTvxb/vElK2Z1kDpVS+N9XyD2Msyv3l3ezuOZTSvABiDoo6w6CGkj4/AUMpdT4nrZkTHTg==}
+  /@capacitor/cli@5.3.0:
+    resolution: {integrity: sha512-ku23HPqUHUnSgo/SyEWxVviEAxb4ieWvAVMI3KfrrBoinAhTOvNSZwT346rIpxZ9Xj3Qp41UjdIz0ME+DYwhfA==}
     engines: {node: '>=16.0.0'}
     hasBin: true
     dependencies:
@@ -241,8 +241,8 @@ packages:
       - supports-color
     dev: true
 
-  /@capacitor/core@5.2.3:
-    resolution: {integrity: sha512-Q1zbgt3Mvldy7six2/GX54kTL0ozgnR37jeDUAXL/fOJBF4Iorr/8A0OjGEAnwEjpR1la7uFZUunESMFyMLhEQ==}
+  /@capacitor/core@5.3.0:
+    resolution: {integrity: sha512-mvhh1yJtcUTZ0hUUriBKKpxq47hn75bjxH3tYPRgAFu1z3gowCg+OtG4Rce3W5gr5fSfCjQgOSL0Vp7k9hPUWw==}
     dependencies:
       tslib: 2.6.1
     dev: true
@@ -259,12 +259,12 @@ packages:
       typescript: 4.2.4
     dev: true
 
-  /@capacitor/ios@5.2.3(@capacitor/core@5.2.3):
-    resolution: {integrity: sha512-ailR/Mer48GEXdqip+ENyN3Qk+ZtUBNDTlHh83WLNbx6uv71z6lCeoLKBXdtSEBFwzFrwtCO5upzbdzK79pONQ==}
+  /@capacitor/ios@5.3.0(@capacitor/core@5.3.0):
+    resolution: {integrity: sha512-AxcW6kp2dOhJ7D6Jz7FAiVi+tq8rv3K3VrfZ0rcGJGlqZfrOJ1m8ImcQ7cO9Fec7wf7a/XSwMOqWemYZFLOO8w==}
     peerDependencies:
-      '@capacitor/core': ^5.2.0
+      '@capacitor/core': ^5.3.0
     dependencies:
-      '@capacitor/core': 5.2.3
+      '@capacitor/core': 5.3.0
     dev: true
 
   /@colors/colors@1.5.0:
