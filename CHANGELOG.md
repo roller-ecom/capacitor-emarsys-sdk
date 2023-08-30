@@ -1,3 +1,10 @@
+## [1.2.1-beta.4](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.2.1-beta.3...V1.2.1-beta.4) (2023-08-30)
+
+
+### Bug Fixes
+
+* release commit ([ac4a8f6](https://github.com/roller-ecom/capacitor-emarsys-sdk/commit/ac4a8f6419223ccca5ef91d5c3bacc5451009973))
+
 ## [1.2.1-beta.3](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.2.1-beta.2...V1.2.1-beta.3) (2023-08-16)
 
 
