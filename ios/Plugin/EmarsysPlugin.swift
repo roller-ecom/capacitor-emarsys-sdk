@@ -19,9 +19,9 @@ public class EmarsysPlugin: CAPPlugin {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.didReceiveRemoteNotification(notification:)), name: .emarsysReceivedRemoteNotification, object: nil)
         
-        let mobileEngageApplicationCode = self.getConfigValue("mobileEngageApplicationCode") as? String;
-        let merchantId = self.getConfigValue("merchantId") as? String;
-        let consoleLogLevels = self.getConfigValue("consoleLogLevels") as? [String];
+        let mobileEngageApplicationCode = self.getConfig().getString("mobileEngageApplicationCode");
+        let merchantId = self.getConfig().getString("merchantId");
+        let consoleLogLevels = self.getConfig().getArray("consoleLogLevels") as? [String];
         
         let config = EMSConfig.make { builder in
             if(mobileEngageApplicationCode != nil) {
