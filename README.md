@@ -5,7 +5,6 @@
 
 This Plugin is used as a wrapper for the [Emarsys SDK](https://help.emarsys.com/hc/en-us).
 
-
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Content**
