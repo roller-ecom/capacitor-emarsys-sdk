@@ -1,3 +1,10 @@
+## [1.2.1-beta.6](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.2.1-beta.5...V1.2.1-beta.6) (2024-09-11)
+
+
+### Bug Fixes
+
+* use getConfig instead of the deprecated getConfigValue ([3b4e25e](https://github.com/roller-ecom/capacitor-emarsys-sdk/commit/3b4e25e77562b44b10168b449e06463334393a15))
+
 ## [1.2.1-beta.5](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.2.1-beta.4...V1.2.1-beta.5) (2024-09-11)
 
 
