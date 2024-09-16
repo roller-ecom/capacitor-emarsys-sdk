@@ -1,7 +1,8 @@
 {
   "name": "@rollershop/capacitor-emarsys-sdk",
-  "version": "1.2.0",
+  "version": "1.2.1-beta.6",
   "description": "Capacitor Plugin that wraps the Emarsys SDK",
+  "type": "module",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -13,14 +14,14 @@
     "ios/Plugin/",
     "RollershopCapacitorEmarsysSdk.podspec"
   ],
-  "author": "SimplifySolutions",
+  "author": "Roller GmbH",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EinfachHans/capacitor-emarsys-sdk.git"
+    "url": "git+https://github.com/roller-ecom/capacitor-emarsys-sdk.git"
   },
   "bugs": {
-    "url": "https://github.com/EinfachHans/capacitor-emarsys-sdk/issues"
+    "url": "https://github.com/roller-ecom/capacitor-emarsys-sdk/issues"
   },
   "keywords": [
     "capacitor",
@@ -33,52 +34,52 @@
   ],
   "scripts": {
     "check:updates": "npm-check --skip-unused -u -E",
-    "verify": "npm run verify:ios && npm run verify:web",
+    "verify": "pnpm verify:ios && pnpm verify:web",
     "verify:ios": "cd ios && pod install && xcodebuild -workspace Plugin.xcworkspace -scheme Plugin && cd ..",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
-    "verify:web": "npm run build:without:docgen",
-    "lint": "npm run eslint && npm run prettier -- --check && npm run swiftlint -- lint",
-    "fmt": "npm run eslint -- --fix && npm run prettier -- --write && npm run swiftlint -- autocorrect --format",
+    "verify:web": "pnpm build:without:docgen",
+    "lint": "pnpm eslint && pnpm prettier -- --check && pnpm swiftlint -- lint",
+    "fmt": "pnpm eslint -- --fix && pnpm prettier -- --write && pnpm swiftlint -- autocorrect --format",
     "eslint": "eslint . --ext ts",
     "prettier": "prettier \"**/*.{css,html,ts,js,java}\"",
     "swiftlint": "node-swiftlint",
     "docgen": "docgen --api EmarsysPlugin --output-readme README.md --output-json dist/docs.json && doctoc README.md --github --title '**Table of Content**' --maxlevel 3",
-    "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js",
-    "build:without:docgen": "npm run clean && tsc && rollup -c rollup.config.js",
+    "build": "pnpm clean && pnpm docgen && tsc && rollup -c rollup.config.js",
+    "build:without:docgen": "pnpm clean && tsc && rollup -c rollup.config.js",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "pnpm build"
   },
   "devDependencies": {
-    "@capacitor/android": "^4.0.0",
-    "@capacitor/core": "^4.0.0",
-    "@capacitor/cli": "^4.0.0",
-    "@capacitor/docgen": "0.2.0",
-    "@capacitor/ios": "^4.0.0",
-    "@commitlint/config-conventional": "17.0.0",
-    "@ionic/eslint-config": "0.3.0",
-    "@ionic/prettier-config": "2.0.0",
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/cli": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/docgen": "0.2.1",
+    "@capacitor/ios": "^6.0.0",
+    "@commitlint/config-conventional": "17.7.0",
+    "@ionic/eslint-config": "^0.4.0",
+    "@ionic/prettier-config": "4.0.0",
     "@ionic/swiftlint-config": "1.1.2",
-    "@saithodev/semantic-release-backmerge": "2.1.2",
-    "@semantic-release/changelog": "6.0.1",
+    "@saithodev/semantic-release-backmerge": "3.2.0",
+    "@semantic-release/changelog": "6.0.3",
     "@semantic-release/exec": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/npm": "9.0.1",
-    "doctoc": "2.2.0",
-    "eslint": "8.15.0",
-    "@typescript-eslint/eslint-plugin": "5.25.0",
-    "@typescript-eslint/parser": "5.25.0",
-    "npm-check": "5.9.2",
-    "prettier": "2.6.2",
-    "prettier-plugin-java": "1.6.1",
-    "rimraf": "3.0.2",
-    "rollup": "2.73.0",
-    "semantic-release": "19.0.2",
+    "@semantic-release/npm": "10.0.4",
+    "@typescript-eslint/eslint-plugin": "6.4.0",
+    "@typescript-eslint/parser": "6.4.0",
+    "doctoc": "2.2.1",
+    "eslint": "^8.57.0",
+    "npm-check": "6.0.1",
+    "prettier": "3.0.2",
+    "prettier-plugin-java": "2.2.0",
+    "rimraf": "5.0.1",
+    "rollup": "3.28.0",
+    "semantic-release": "21.0.7",
     "swiftlint": "1.0.1",
-    "typescript": "4.5.5"
+    "typescript": "4.4.4"
   },
   "peerDependencies": {
-    "@capacitor/core": "^4.0.0"
+    "@capacitor/core": "^6.0.0"
   },
   "prettier": "@ionic/prettier-config",
   "swiftlint": "@ionic/swiftlint-config",
@@ -96,6 +97,7 @@
       "src": "android"
     }
   },
+  "packageManager": "pnpm@8.6.6",
   "publishConfig": {
     "access": "public"
   }

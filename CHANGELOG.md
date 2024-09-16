@@ -1,3 +1,45 @@
+## [1.2.1-beta.6](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.2.1-beta.5...V1.2.1-beta.6) (2024-09-11)
+
+
+### Bug Fixes
+
+* use getConfig instead of the deprecated getConfigValue ([3b4e25e](https://github.com/roller-ecom/capacitor-emarsys-sdk/commit/3b4e25e77562b44b10168b449e06463334393a15))
+
+## [1.2.1-beta.5](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.2.1-beta.4...V1.2.1-beta.5) (2024-09-11)
+
+
+### Bug Fixes
+
+* release commit (chore doesn't create a new version) ([cb2eb69](https://github.com/roller-ecom/capacitor-emarsys-sdk/commit/cb2eb6959623897253144097fe7ac993ca0396c6))
+
+## [1.2.1-beta.4](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.2.1-beta.3...V1.2.1-beta.4) (2023-08-30)
+
+
+### Bug Fixes
+
+* release commit ([ac4a8f6](https://github.com/roller-ecom/capacitor-emarsys-sdk/commit/ac4a8f6419223ccca5ef91d5c3bacc5451009973))
+
+## [1.2.1-beta.3](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.2.1-beta.2...V1.2.1-beta.3) (2023-08-16)
+
+
+### Code Refactoring
+
+* update EmarsysSDK to `3.4.0` ([7244494](https://github.com/roller-ecom/capacitor-emarsys-sdk/commit/724449403c1fb1d984e4d5ff3fc21fc3285124df))
+
+## [1.2.1-beta.2](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.2.1-beta.1...V1.2.1-beta.2) (2023-08-16)
+
+
+### Bug Fixes
+
+* chore edits ([b9039b1](https://github.com/roller-ecom/capacitor-emarsys-sdk/commit/b9039b1716432b2bc85c34bc0c9c04c273babddd))
+
+## [1.2.1-beta.1](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.2.0...V1.2.1-beta.1) (2023-08-16)
+
+
+### Bug Fixes
+
+* test ci & new capacitor versoin ([1696f8f](https://github.com/roller-ecom/capacitor-emarsys-sdk/commit/1696f8f6a0305b01ff7418a556a376f5b33b71ea))
+
 ## [1.2.0](https://github.com/EinfachHans/capacitor-emarsys-sdk/compare/V1.1.0...V1.2.0) (2022-08-03)
 
 

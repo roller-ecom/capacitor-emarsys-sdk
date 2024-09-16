@@ -2,10 +2,10 @@ name: 'Next Version'
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  GIT_AUTHOR_NAME: EinfachHans
-  GIT_AUTHOR_EMAIL: hanskrywaa@web.de
-  GIT_COMMITTER_NAME: EinfachHans
-  GIT_COMMITTER_EMAIL: hanskrywaa@web.de
+  GIT_AUTHOR_NAME: 'CI Bot'
+  GIT_AUTHOR_EMAIL: ci-bot@roller.de
+  GIT_COMMITTER_NAME: 'CI Bot'
+  GIT_COMMITTER_EMAIL: ci-bot@roller.de
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 on:
@@ -20,19 +20,31 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [ 16.14.2 ]
+        node-version: [ 18.16.0 ]
 
     steps:
       - name: 'Check out Git repository'
         uses: actions/checkout@v3
 
-      - name: 'Set up Node.js'
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: Set node
         uses: actions/setup-node@v3
+        # TODO
+        # with:
+        #   node-version: ${{ matrix.node-version }}
         with:
           node-version: ${{ matrix.node-version }}
+          cache: pnpm
+
+      - name: Setup ni
+        run: npm i -g @antfu/ni
 
       - name: 'Install Node.js dependencies'
-        run: npm ci
+        # run: npm ci
+        run: nci
 
       - name: 'Starting semantic release'
         run: npx semantic-release
+        # run: nlx semantic-release

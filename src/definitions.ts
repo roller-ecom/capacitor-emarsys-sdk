@@ -312,7 +312,7 @@ export interface EmarsysPlugin {
   addListener(
     eventName: 'silentPushMessageInformation',
     listenerFunc: (information: SilentPushMessageInformation) => void
-  ): Promise<PluginListenerHandle> & PluginListenerHandle;
+  ): Promise<PluginListenerHandle>;
 
   /**
    * Remove all native listeners for this plugin.
