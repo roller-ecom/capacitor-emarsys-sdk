@@ -1,3 +1,10 @@
+## [1.2.2-beta.1](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.2.1...V1.2.2-beta.1) (2024-11-13)
+
+
+### Bug Fixes
+
+* package export type problem ([fcf30d2](https://github.com/roller-ecom/capacitor-emarsys-sdk/commit/fcf30d22b0aa64bd4dc956e543cda846c4dca282))
+
 ## [1.2.1](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.2.0...V1.2.1) (2024-09-16)
 
 
