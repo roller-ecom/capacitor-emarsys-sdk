@@ -2,7 +2,6 @@
   "name": "@rollershop/capacitor-emarsys-sdk",
   "version": "1.2.1",
   "description": "Capacitor Plugin that wraps the Emarsys SDK",
-  "type": "module",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -44,8 +43,8 @@
     "prettier": "prettier \"**/*.{css,html,ts,js,java}\"",
     "swiftlint": "node-swiftlint",
     "docgen": "docgen --api EmarsysPlugin --output-readme README.md --output-json dist/docs.json && doctoc README.md --github --title '**Table of Content**' --maxlevel 3",
-    "build": "pnpm clean && pnpm docgen && tsc && rollup -c rollup.config.js",
-    "build:without:docgen": "pnpm clean && tsc && rollup -c rollup.config.js",
+    "build": "pnpm clean && pnpm docgen && tsc && rollup -c rollup.config.mjs",
+    "build:without:docgen": "pnpm clean && tsc && rollup -c rollup.config.mjs",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "prepublishOnly": "pnpm build"
