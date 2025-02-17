@@ -1,3 +1,16 @@
+## [1.3.0-beta.1](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.2.2-beta.1...V1.3.0-beta.1) (2025-02-17)
+
+
+### Features
+
+* update deps & capacitor v7 ([4564015](https://github.com/roller-ecom/capacitor-emarsys-sdk/commit/45640153b4ca596a95cfe62d80a6ff201d3e86aa))
+* update emarsys sdk to 3.7.3 ([6f156bb](https://github.com/roller-ecom/capacitor-emarsys-sdk/commit/6f156bba839caae1dc22d2bfd14328ca66bd4ea0))
+
+
+### Bug Fixes
+
+* broken package-lock ([ed64170](https://github.com/roller-ecom/capacitor-emarsys-sdk/commit/ed64170f37a72fcc650cd785bd5de9051e75956d))
+
 ## [1.2.2-beta.1](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.2.1...V1.2.2-beta.1) (2024-11-13)
 
 
