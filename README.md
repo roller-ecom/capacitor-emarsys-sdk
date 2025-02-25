@@ -69,7 +69,7 @@ This Plugin is used as a wrapper for the [Emarsys SDK](https://help.emarsys.com/
 
 ## SDK Versions
 
-- iOS: [`3.7.0`](https://github.com/emartech/ios-emarsys-sdk/releases/tag/3.7.0)
+- iOS: [`3.8.0`](https://github.com/emartech/ios-emarsys-sdk/releases/tag/3.8.0)
 - Android: Not implemented
 
 ## Install
@@ -250,8 +250,8 @@ In order to track email link clicks that open the application directly with the 
 * [`getHardwareId()`](#gethardwareid)
 * [`getLanguageCode()`](#getlanguagecode)
 * [`getSdkVersion()`](#getsdkversion)
-* [`addListener('pushMessageEvent', ...)`](#addlistenerpushmessageevent)
-* [`addListener('silentPushMessageInformation', ...)`](#addlistenersilentpushmessageinformation)
+* [`addListener('pushMessageEvent', ...)`](#addlistenerpushmessageevent-)
+* [`addListener('silentPushMessageInformation', ...)`](#addlistenersilentpushmessageinformation-)
 * [`removeAllListeners()`](#removealllisteners)
 * [Interfaces](#interfaces)
 * [Type Aliases](#type-aliases)
