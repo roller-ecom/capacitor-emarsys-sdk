@@ -1,3 +1,10 @@
+## [1.4.0](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.3.0...V1.4.0) (2025-05-26)
+
+
+### Features
+
+* update emarsys sdk to 3.8.1 ([4269b34](https://github.com/roller-ecom/capacitor-emarsys-sdk/commit/4269b348446fbd16528db43921ae7bde28fd12cd))
+
 ## [1.3.0](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.2.1...V1.3.0) (2025-02-25)
 
 
