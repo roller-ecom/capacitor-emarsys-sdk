@@ -1,3 +1,10 @@
+## [1.5.0](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.4.0...V1.5.0) (2025-10-23)
+
+
+### Features
+
+* detect simulator on registration ([a101eee](https://github.com/roller-ecom/capacitor-emarsys-sdk/commit/a101eee54e17264f12e78371984f11a52dc06901))
+
 ## [1.4.0](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.3.0...V1.4.0) (2025-05-26)
 
 
