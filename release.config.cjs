@@ -16,6 +16,7 @@ module.exports = {
       {
         preset: 'conventionalcommits',
         releaseRules: [
+          { type: 'chore', release: 'patch' },
           { type: 'refactor', release: 'patch' },
           { scope: 'no-release', release: false },
         ],
