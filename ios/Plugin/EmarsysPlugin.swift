@@ -141,10 +141,21 @@ public class EmarsysPlugin: CAPPlugin {
         if(self.savedRegisterCall != nil) {
             return
         }
+        
         self.savedRegisterCall = call;
-        DispatchQueue.main.async {
-            UIApplication.shared.registerForRemoteNotifications()
-        }
+        
+        #if targetEnvironment(simulator)
+            // Simulator detected - resolve immediately with mock token
+            call.resolve([
+                "value": "SIMULATOR_TOKEN_FOR_TESTING"
+            ])
+            self.savedRegisterCall = nil
+        #else
+            // Real device - proceed normally
+            DispatchQueue.main.async {
+                UIApplication.shared.registerForRemoteNotifications()
+            }
+        #endif
     }
     
     @objc func setContact(_ call: CAPPluginCall) {
