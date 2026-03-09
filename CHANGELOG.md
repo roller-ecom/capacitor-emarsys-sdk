@@ -1,3 +1,13 @@
+## [2.0.0-beta.1](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.5.0...V2.0.0-beta.1) (2026-03-09)
+
+### ⚠ BREAKING CHANGES
+
+* requires capacitor 8, drops capacitor 7 support
+
+### Features
+
+* update to capacitor 8 and support SPM ([d1b6d8b](https://github.com/roller-ecom/capacitor-emarsys-sdk/commit/d1b6d8bcabe864e1d410f35ce0c1d2473a357464))
+
 ## [1.5.0](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.4.0...V1.5.0) (2025-10-23)
 
 
