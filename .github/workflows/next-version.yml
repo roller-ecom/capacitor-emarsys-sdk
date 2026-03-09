@@ -17,10 +17,16 @@ on:
 jobs:
   next-version:
     runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
 
     strategy:
       matrix:
-        node-version: [ 20.14.0 ]
+        node-version: [ 24.13.0 ]
 
     steps:
       - name: 'Check out Git repository'
@@ -31,12 +37,10 @@ jobs:
 
       - name: Set node
         uses: actions/setup-node@v3
-        # TODO
-        # with:
-        #   node-version: ${{ matrix.node-version }}
         with:
           node-version: ${{ matrix.node-version }}
           cache: pnpm
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Setup ni
         run: npm i -g @antfu/ni

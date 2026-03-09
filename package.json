@@ -10,7 +10,9 @@
     "android/src/main/",
     "android/build.gradle",
     "dist/",
-    "ios/Plugin/",
+    "ios/Sources",
+    "ios/Tests",
+    "Package.swift",
     "RollershopCapacitorEmarsysSdk.podspec"
   ],
   "author": "Roller GmbH",
@@ -34,7 +36,7 @@
   "scripts": {
     "check:updates": "npm-check --skip-unused -u -E",
     "verify": "pnpm verify:ios && pnpm verify:web",
-    "verify:ios": "cd ios && pod install && xcodebuild -workspace Plugin.xcworkspace -scheme Plugin && cd ..",
+    "verify:ios": "xcodebuild -scheme RollershopCapacitorEmarsysSdk -destination generic/platform=iOS build",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
     "verify:web": "pnpm build:without:docgen",
     "lint": "pnpm eslint && pnpm prettier -- --check && pnpm swiftlint -- lint",
@@ -50,20 +52,20 @@
     "prepublishOnly": "pnpm build"
   },
   "devDependencies": {
-    "@capacitor/android": "^7.0.0",
-    "@capacitor/cli": "^7.0.0",
-    "@capacitor/core": "^7.0.0",
-    "@capacitor/docgen": "^0.3.0",
-    "@capacitor/ios": "^7.0.0",
-    "@commitlint/config-conventional": "17.7.0",
+    "@capacitor/android": "^8.0.0",
+    "@capacitor/cli": "^8.0.0",
+    "@capacitor/core": "^8.0.0",
+    "@capacitor/docgen": "^0.3.1",
+    "@capacitor/ios": "^8.0.0",
+    "@commitlint/config-conventional": "20.4.3",
     "@ionic/eslint-config": "^0.4.0",
     "@ionic/prettier-config": "4.0.0",
     "@ionic/swiftlint-config": "^2.0.0",
-    "@saithodev/semantic-release-backmerge": "3.2.0",
+    "@saithodev/semantic-release-backmerge": "4.0.1",
     "@semantic-release/changelog": "6.0.3",
-    "@semantic-release/exec": "6.0.3",
+    "@semantic-release/exec": "7.1.0",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/npm": "10.0.4",
+    "@semantic-release/npm": "13.1.5",
     "@typescript-eslint/eslint-plugin": "6.4.0",
     "@typescript-eslint/parser": "6.4.0",
     "doctoc": "2.2.1",
@@ -73,12 +75,12 @@
     "prettier-plugin-java": "2.6.7",
     "rimraf": "6.0.1",
     "rollup": "4.34.6",
-    "semantic-release": "21.0.7",
+    "semantic-release": "25.0.3",
     "swiftlint": "^2.0.0",
     "typescript": "5.7.3"
   },
   "peerDependencies": {
-    "@capacitor/core": ">=7.0.0"
+    "@capacitor/core": ">=8.0.0"
   },
   "prettier": "@ionic/prettier-config",
   "swiftlint": "@ionic/swiftlint-config",
@@ -96,7 +98,7 @@
       "src": "android"
     }
   },
-  "packageManager": "pnpm@8.6.6",
+  "packageManager": "pnpm@10.28.2",
   "publishConfig": {
     "access": "public"
   }

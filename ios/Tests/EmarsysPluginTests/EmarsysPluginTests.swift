@@ -1,5 +1,5 @@
 import XCTest
-@testable import Plugin
+@testable import EmarsysPlugin
 
 class EmarsysTests: XCTestCase {
     override func setUp() {

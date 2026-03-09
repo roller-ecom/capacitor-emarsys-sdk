@@ -3,7 +3,41 @@ import Capacitor
 import EmarsysSDK
 
 @objc(EmarsysPlugin)
-public class EmarsysPlugin: CAPPlugin {
+public class EmarsysPlugin: CAPPlugin, CAPBridgedPlugin {
+    public let identifier = "EmarsysPlugin"
+    public let jsName = "Emarsys"
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "requestPermissions", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "checkPermissions", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "register", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "setContact", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "setAuthenticatedContact", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "clearContact", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "getPushToken", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "clearPushToken", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "pauseInApp", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "isInAppPaused", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "resumeInApp", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "trackItem", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "trackCategory", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "trackSearch", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "trackTag", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "trackCard", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "trackPurchase", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "trackCustomEvent", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "recommendProducts", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "trackRecommendationClick", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "fetchMessages", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "addTag", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "removeTag", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "getApplicationCode", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "setApplicationCode", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "getMerchantId", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "getContactFieldId", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "getHardwareId", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "getLanguageCode", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "getSdkVersion", returnType: CAPPluginReturnPromise),
+    ]
     private var predictHandler = EmarsysPredict();
     private var inboxHandler = EmarsysInbox();
     private var configHandler = EmarsysConfig();
