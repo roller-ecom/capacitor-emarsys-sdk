@@ -10,6 +10,9 @@ on:
       - 'beta'
       - 'main'
 
+permissions:
+  contents: read
+
 jobs:
   run-verify:
     name: 'Run Verify'
@@ -17,26 +20,23 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [ 20.14.0 ]
+        node-version: [ 24.13.0 ]
 
     steps:
       - name: 'Check out Git repository'
-        uses: actions/checkout@v3
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@d15e628ca66d93ee5f352c71671a7bc6a97af5c9 # v6.0.8
 
       - name: Set node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
         with:
           node-version: ${{ matrix.node-version }}
           cache: pnpm
 
-      - name: Setup ni
-        run: npm i -g @antfu/ni
-
       - name: Install
-        run: nci
+        run: pnpm install --frozen-lockfile
 
       - name: 'Run Verify'
-        run: nr verify
+        run: pnpm verify

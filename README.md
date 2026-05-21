@@ -134,9 +134,11 @@ export default config;
 
 ### iOS
 
+This plugin uses **Swift Package Manager (SPM)**. CocoaPods is no longer supported.
+
 The following changes needs to be done in `AppDelegate.swift`:
 
-1. Add import: `import RollershopCapacitorEmarsysSdk`
+1. Add import: `import EmarsysPlugin`
 2. Extend the base class:
 
 ```swift
@@ -154,17 +156,17 @@ Push notification could show media content and action buttons besides the title 
    - [Guide](https://developer.apple.com/documentation/usernotifications/modifying_content_in_newly_delivered_notifications)
    - Name: `NotificationService`
    - Language: `swift`
-   - If Xcode ask's you tu change the scheme, deny it
-2. Navigate to your App's main `Podfile` and add at the bottom of the file:
-```
-target "NotificationService" do
-  pod 'EmarsysNotificationService'
-end
-```
-3. You may need to run `pod install` after it
-4. Open the `NotificationService.swift` and replace the content with:
+   - If Xcode asks you to change the scheme, deny it
+2. Add the `ios-emarsys-sdk` package to your project via Xcode:
+   - Navigate to your project → **Package Dependencies** → `+`
+   - Enter URL: `https://github.com/emartech/ios-emarsys-sdk.git`
+   - Select version `3.9.0` (Up to Next Major)
+   - Assign `EmarsysNotificationExtensionLibrary` to the `NotificationService` target
+   - Assign `EmarsysSDKLibrary` to the `App` target
+3. Open `NotificationService.swift` and replace the content with:
+
 ```swift
-import EmarsysNotificationService
+import EmarsysSDK
 
 class NotificationService: EMSNotificationService {
 }

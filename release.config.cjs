@@ -16,6 +16,9 @@ module.exports = {
       {
         preset: 'conventionalcommits',
         releaseRules: [
+          { breaking: true, release: 'major' },
+          { type: 'feat', release: 'minor' },
+          { type: 'fix', release: 'patch' },
           { type: 'chore', release: 'patch' },
           { type: 'refactor', release: 'patch' },
           { scope: 'no-release', release: false },
@@ -60,7 +63,12 @@ module.exports = {
         },
       },
     ],
-    ['@semantic-release/npm'],
+    [
+      '@semantic-release/npm',
+      {
+        provenance: true,
+      },
+    ],
     [
       '@semantic-release/exec',
       {
@@ -77,7 +85,7 @@ module.exports = {
       '@semantic-release/git',
       {
         message: 'chore(release): ${nextRelease.version} [skip ci]',
-        assets: ['package.json', 'package-lock.json', 'CHANGELOG.md', 'README.md'],
+        assets: ['package.json', 'pnpm-lock.yaml', 'CHANGELOG.md', 'README.md'],
       },
     ],
     [
@@ -89,10 +97,7 @@ module.exports = {
     [
       '@saithodev/semantic-release-backmerge',
       {
-        branches: [
-          'develop',
-          { from: 'main', to: 'beta' },
-        ],
+        branches: ['develop', { from: 'main', to: 'beta' }],
         clearWorkspace: true,
       },
     ],
