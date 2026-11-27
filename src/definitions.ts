@@ -260,6 +260,8 @@ export interface EmarsysPlugin {
   /**
    * Change the actual `merchantId` that is set in the SDK.
    *
+   * Since Emarsys SDK 3.10.0 this also clears the current contact, so you have to call `setContact` or `setAuthenticatedContact` again afterwards.
+   *
    * @since 1.0.0
    */
   setMerchantId(options: MerchantId): Promise<void>;
@@ -301,7 +303,7 @@ export interface EmarsysPlugin {
    */
   addListener(
     eventName: 'pushMessageEvent',
-    listenerFunc: (event: PushMessageEvent) => void
+    listenerFunc: (event: PushMessageEvent) => void,
   ): Promise<PluginListenerHandle> & PluginListenerHandle;
 
   /**
@@ -311,7 +313,7 @@ export interface EmarsysPlugin {
    */
   addListener(
     eventName: 'silentPushMessageInformation',
-    listenerFunc: (information: SilentPushMessageInformation) => void
+    listenerFunc: (information: SilentPushMessageInformation) => void,
   ): Promise<PluginListenerHandle>;
 
   /**
