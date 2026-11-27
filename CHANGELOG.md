@@ -1,3 +1,13 @@
+## [2.1.0](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V2.0.0...V2.1.0) (2026-11-27)
+
+### Features
+
+* update emarsys sdk to 3.10.2 ([7e587e4](https://github.com/roller-ecom/capacitor-emarsys-sdk/commit/7e587e4bb31ad0db871851680ddd5f7f19a14d6f))
+
+### Styles
+
+* apply prettier formatting ([8f354a9](https://github.com/roller-ecom/capacitor-emarsys-sdk/commit/8f354a991b9c7c83b90ebd57e9629f53a8b7cf67))
+
 ## [2.0.0](https://github.com/roller-ecom/capacitor-emarsys-sdk/compare/V1.5.0...V2.0.0) (2026-05-21)
 
 ### ⚠ BREAKING CHANGES
