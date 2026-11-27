@@ -260,6 +260,8 @@ export interface EmarsysPlugin {
   /**
    * Change the actual `merchantId` that is set in the SDK.
    *
+   * Since Emarsys SDK 3.10.0 this also clears the current contact, so you have to call `setContact` or `setAuthenticatedContact` again afterwards.
+   *
    * @since 1.0.0
    */
   setMerchantId(options: MerchantId): Promise<void>;
