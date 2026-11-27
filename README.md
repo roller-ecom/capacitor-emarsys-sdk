@@ -69,7 +69,7 @@ This Plugin is used as a wrapper for the [Emarsys SDK](https://help.emarsys.com/
 
 ## SDK Versions
 
-- iOS: [`3.9.0`](https://github.com/emartech/ios-emarsys-sdk/releases/tag/3.9.0)
+- iOS: [`3.10.2`](https://github.com/emartech/ios-emarsys-sdk/releases/tag/3.10.2)
 - Android: Not implemented
 
 ## Install
@@ -160,7 +160,7 @@ Push notification could show media content and action buttons besides the title 
 2. Add the `ios-emarsys-sdk` package to your project via Xcode:
    - Navigate to your project → **Package Dependencies** → `+`
    - Enter URL: `https://github.com/emartech/ios-emarsys-sdk.git`
-   - Select version `3.9.0` (Up to Next Major)
+   - Select version `3.10.2` (Up to Next Major)
    - Assign `EmarsysNotificationExtensionLibrary` to the `NotificationService` target
    - Assign `EmarsysSDKLibrary` to the `App` target
 3. Open `NotificationService.swift` and replace the content with:
@@ -722,6 +722,8 @@ setMerchantId(options: MerchantId) => any
 ```
 
 Change the actual `merchantId` that is set in the SDK.
+
+Since Emarsys SDK 3.10.0 this also clears the current contact, so you have to call `setContact` or `setAuthenticatedContact` again afterwards.
 
 | Param         | Type                                              |
 | ------------- | ------------------------------------------------- |
