@@ -39,7 +39,7 @@ export interface CustomEvent {
    *
    * @since 1.0.0
    */
-  attributes?: {[key: string]: string};
+  attributes?: { [key: string]: string };
 }
 
 /**
@@ -288,7 +288,7 @@ export interface Product {
   /**
    * @since 1.0.0
    */
-  customFields: {[key: string]: any};
+  customFields: { [key: string]: any };
 
   /**
    * @since 1.0.0
